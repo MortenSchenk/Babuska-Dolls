@@ -1,0 +1,17 @@
+c:\users\schenk\documents\visual studio 2015\Projects\Bypass\Bypass\bin\x64\Release\Bypass.exe.config
+c:\users\schenk\documents\visual studio 2015\Projects\Bypass\Bypass\bin\x64\Release\Bypass.exe
+c:\users\schenk\documents\visual studio 2015\Projects\Bypass\Bypass\bin\x64\Release\Bypass.pdb
+c:\users\schenk\documents\visual studio 2015\Projects\Bypass\Bypass\bin\x64\Release\System.Management.Automation.dll
+c:\users\schenk\documents\visual studio 2015\Projects\Bypass\Bypass\obj\x64\Release\Bypass.csprojResolveAssemblyReference.cache
+c:\users\schenk\documents\visual studio 2015\Projects\Bypass\Bypass\obj\x64\Release\Bypass.exe
+c:\users\schenk\documents\visual studio 2015\Projects\Bypass\Bypass\obj\x64\Release\Bypass.pdb
+C:\Research\Code\Bypass\Bypass\bin\x64\Release\Bypass.exe.config
+C:\Research\Code\Bypass\Bypass\obj\x64\Release\Bypass.exe
+C:\Research\Code\Bypass\Bypass\obj\x64\Release\Bypass.pdb
+C:\Research\Windows 10 Powershell Constrained Language\Bypass\Bypass\bin\x64\Release\Bypass.exe.config
+C:\Research\Windows 10 Powershell Constrained Language\Bypass\Bypass\obj\x64\Release\Bypass.exe
+C:\Research\Windows 10 Powershell Constrained Language\Bypass\Bypass\obj\x64\Release\Bypass.pdb
+C:\Research\Windows 10 Powershell Constrained Language\Bypass\Bypass\bin\x64\Release\Bypass.exe
+C:\Research\Windows 10 Powershell Constrained Language\Bypass\Bypass\bin\x64\Release\Bypass.pdb
+C:\Research\Windows 10 Powershell Constrained Language\Bypass\Bypass\bin\x64\Release\System.Management.Automation.dll
+C:\Research\Windows 10 Powershell Constrained Language\Bypass\Bypass\obj\x64\Release\Bypass.csprojResolveAssemblyReference.cache

